@@ -1,3 +1,5 @@
+import math;
+
 print("Calculadora de distância de dois pontos: ")
 
 print("\nPonto 1")
@@ -6,6 +8,7 @@ y1 = int(input("Insira o valor y do ponto 1: "))
 x2 = int(input("Insira o valor x do ponto 2: "))
 y2 = int(input("Insira o valor y do ponto 2: "))
 
-calculo = ((x2 - x1)**2 + (y2-y1)**2)**0.5
-
-print(calculo)
+# calculo = ((x2 - x1)**2 + (y2-y1)**2)**0.5
+# ou
+calculo = math.sqrt((x2 - x1)**2 + (y2-y1)**2)
+print(f'A distância dos dois pontos é: {calculo}')
