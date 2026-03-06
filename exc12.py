@@ -1,11 +1,3 @@
-# Faça um algoritmo que leia o salário bruto mensal de um funcionário, calcule e
-# mostre os valores conforme modelo abaixo:
-# Salário Bruto :R$
-# (-) IR (15%) :R$
-# (-) INSS (11%) :R$
-# (-) Sindicato (3%) :R$
-# Salário Líquido :R$
-
 print("A calculadora do seu salário!")
 
 salario_bruto = float(input("Insira seu salário bruto: "))
