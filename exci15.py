@@ -9,4 +9,4 @@ litros_consumido = float(input("\nInsira o valor de litros de gasolina consumido
 preco_litro = float(input("Insira o valor do Litro de gasolina: "))
 
 distancia = km_final-km_initial
-print(f'\n------------Informações do carro------------\nModelo: {modelo} | Marca: {marca} | Ano: {ano}\n\n------------Informações da viagem-----------\nDistância percorrida: {distancia}KM\nLitros consumidos: {litros_consumido}L\nPreço do litro da gasolina: {preco_litro}\n\nTotal a pagar: R${round(preco_litro*litros_consumido, 2)}\nO seu carro faz {distancia//litros_consumido}KM/L')
+print(f'\n------------Informações do carro------------\nModelo: {modelo} | Marca: {marca} | Ano: {ano}\n\n------------Informações da viagem-----------\nDistância percorrida: {distancia}KM\nLitros consumidos: {litros_consumido}L\nPreço do litro da gasolina: {preco_litro}\n\nTotal a pagar: R${round(preco_litro*litros_consumido, 2)}\nO seu carro faz {round(distancia/litros_consumido, 2)}KM/L')
