@@ -1,9 +1,8 @@
 n = int(input("Insira um número para calcular seu fatorial: "))
-f = n-1
 
-while f > 0:
+for f in range(n-1, 0, -1):
+  print(f'{n} x {f} = {n}')
   n = n * f
-  print(n)
   f -= 1
 
-print(f'Final {n}')
+print(f'Resultado Final {n}')

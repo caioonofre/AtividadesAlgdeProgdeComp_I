@@ -1,12 +1,12 @@
 from fractions import Fraction
 
-dvsor = 1
 ddendo = 1
-soma = dvsor/ddendo
+soma = 0
 
-while ddendo < 100:
+for i in range(100):
+  dvisao = 1/ddendo
+  soma += dvisao
   ddendo += 1
-  soma = (soma) + (dvsor/ddendo)
 
 
 print(f'Resultado em decimal {soma}')
