@@ -1,8 +1,8 @@
-soma = 1
-sinal = -1
+soma = 0
+sinal = 1
 
-for i in range(1, 52):
-    denominador = (2 * i + 1) ** 2
+for i in range(1, 104, 2):
+    denominador = (i**3)
     soma += sinal * (1 / denominador)
     sinal *= -1
 
