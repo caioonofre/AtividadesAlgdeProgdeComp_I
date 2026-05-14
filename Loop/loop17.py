@@ -7,13 +7,18 @@ total_pessoas = 0
 n = int(input("Digite a quantidade de casas pesquisadas: "))
 
 for i in range(n):
-    print(f"\nCasa {i+1}")
-
+    print(f"\nCasa {i + 1}")
+    canais = [4, 5, 9, 12]
     canal = int(input("Digite o canal (4, 5, 9, 12 ou 0 para TV desligada): "))
 
-    while canal != 4 or canal != 5 or canal != 9 or canal != 12:
-        canal = int(input("Digite o canal (4, 5, 9, 12 ou 0 para TV desligada): "))
+    while canal not in canais and canal != 0:
+        canal = int(
+            input(
+                "Canal invalido, digite novamente (4, 5, 9, 12 ou 0 para TV desligada): "
+            )
+        )
 
+    print(f"O canal assistido foi o {canal}: ")
     pessoas = int(input("Digite o número de pessoas assistindo: "))
 
     if canal != 0:
@@ -30,7 +35,8 @@ for i in range(n):
 
 if total_pessoas > 0:
     print("\nPercentual de audiência:")
-
+    print(f"O total de casas pesquisadas foi: {n}")
+    print(f"O total de pessoas que participaram da pesquisa foi: {total_pessoas}")
     print(f"Canal 4: {(canal4 / total_pessoas) * 100:.2f}%")
     print(f"Canal 5: {(canal5 / total_pessoas) * 100:.2f}%")
     print(f"Canal 9: {(canal9 / total_pessoas) * 100:.2f}%")
