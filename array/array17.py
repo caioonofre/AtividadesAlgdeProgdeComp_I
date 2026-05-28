@@ -1,9 +1,29 @@
-# 17) Refaça o algoritmo acima(array16.py) otimizando-o usando uma técnica conhecida por Pesquisa Binária.
-# Suponha primeiramente que o vetor já esteja ordenado. Procuramos então o elemento K
-# dividindo o vetor em duas partes e testando em qual das duas partes ele deveria estar.
-# Procede-se então, da mesma forma para a parte provável, e assim sucessivamente.
-# Obs.: na pesquisa sequencial simples (problema 16), o número médio de comparações que
-# devem ser feitas até encontrar a chave é N/2, onde N é o número de elementos do vetor. No
-# nosso caso, no algoritmo 16, teríamos, em média, 128/2 = 64 comparações. Na pesquisa
-# binária, o número máximo de comparações é log2N. Teríamos, então, log2128=7 comparações,
-# no máximo.
+def pesquisa_binaria(vetor, chave):
+    esquerda, direita = 0, len(vetor) - 1
+
+    while esquerda <= direita:
+        meio = (esquerda + direita) // 2
+
+        if vetor[meio] == chave:
+            return meio
+        elif vetor[meio] < chave:
+            esquerda = meio + 1
+        else:
+            direita = meio - 1
+
+    return -1
+
+vetor = []
+print("Digite 10 elementos para o vetor (em ordem crescente):")
+for _ in range(10):
+    elemento = int(input())
+    vetor.append(elemento)
+chave = int(input("Digite a chave K: "))
+
+posicao = pesquisa_binaria(vetor, chave)
+if posicao != -1:
+    print(f"CHAVE K ENCONTRADA NA POSIÇÃO: {posicao}")
+else:
+    print("CHAVE K NÃO ENCONTRADA")
+
+
