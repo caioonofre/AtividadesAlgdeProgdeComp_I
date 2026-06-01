@@ -1,8 +1,6 @@
 # nesse exercicio usei a biblioteca random para gerar numeros aleatorios para a matriz, a fim de curiosidade.
 import random
 
-
-# Criando a matriz MAT de 4 x 5 de numeros aleatorios
 MAT = [
     [random.randint(1, 100) for _ in range(5)] for _ in range(4)
 ]

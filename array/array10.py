@@ -3,7 +3,7 @@ S = 0
 contador = 0
 
 for i in range(5):
-    valor = float(input(f"Digite o valor da posição {i}: "))
+    valor = float(input(f"Digite o valor da posição {i+1}: "))
     A.append(valor)
 
 for i in range(5):
