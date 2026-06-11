@@ -36,7 +36,7 @@ def jogar():
         "ciclismo",
         "boxe",
         "karate",
-        "judô",
+        "judo",
         "xadrez",
         "damas",
         "poker",
@@ -44,6 +44,7 @@ def jogar():
         "xadrez",
         "dama",
     ]
+    
     palavra_secreta = random.choice(palavras).upper()
     letras_acertadas = ["_" for letra in palavra_secreta]
     enforcou = False
